@@ -1,0 +1,6 @@
+{
+  "name": "CoreSudo Labs",
+  "description": "CoreSudo Labs is a premier software development agency delivering modern web development, robust backend engineering, AI & automation solutions, and custom software systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
