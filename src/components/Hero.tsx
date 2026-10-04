@@ -26,12 +26,12 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-7 space-y-8 text-left">
             
             {/* Subtle editorial kicker (Unboxed text with typographic separator, zero pills) */}
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#0F4C4C] uppercase">
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#0F4C4C] uppercase flex-wrap">
               <span>Software Engineering</span>
               <span aria-hidden="true" className="text-[#7A9A8B]">·</span>
               <span>Backend Architecture</span>
               <span aria-hidden="true" className="text-[#7A9A8B]">·</span>
-              <span>AI Automation</span>
+              <span>AI &amp; Machine Learning</span>
             </div>
 
             {/* Bold Headline with text-wrap balance */}

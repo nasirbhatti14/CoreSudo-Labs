@@ -72,40 +72,52 @@ export const Projects: React.FC = () => {
               key={project.id}
               className="bg-[#EFEBE3] rounded-3xl p-6 sm:p-10 lg:p-12 border border-[#DDD8CC] shadow-xs transition-all duration-300 hover:border-[#7A9A8B]"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                 
-                {/* Visual Preview Column */}
-                <div className="lg:col-span-6 order-2 lg:order-1">
-                  <div className="relative rounded-2xl overflow-hidden border border-[#DDD8CC] bg-[#F7F5F0] shadow-sm group">
-                    <div className="aspect-16/10 w-full overflow-hidden bg-[#E5DFD4]">
+                {/* Visual Preview Column - Full view with slight zoom out and browser window mockup */}
+                <div className="lg:col-span-7 order-2 lg:order-1">
+                  <div className="relative rounded-2xl overflow-hidden border border-[#DDD8CC] bg-[#0c221e] shadow-md group">
+                    
+                    {/* Browser Mockup Chrome Bar */}
+                    <div className="flex items-center justify-between px-3.5 py-2.5 bg-[#081714] border-b border-[#1f3e36]/60 text-xs">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                        <span className="ml-2 font-mono text-[11px] text-[#7A9A8B] truncate max-w-[200px] sm:max-w-none">
+                          noor-muhammad-protein-farm.netlify.app
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[11px] text-[#25D366] font-medium shrink-0">
+                        <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+                        <span className="hidden sm:inline">Live Deployment</span>
+                      </div>
+                    </div>
+
+                    {/* Screenshot Frame - 100% Full View, Zoomed-Out with subtle padding */}
+                    <div className="aspect-[1897/918] w-full overflow-hidden bg-[#0a1b18] p-1.5 sm:p-2.5 flex items-center justify-center">
                       {!imageError ? (
                         <img
                           src={project.imageSrc}
                           alt={`${project.title} - Poultry farm web platform preview`}
                           referrerPolicy="no-referrer"
                           onError={handleImageError}
-                          className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                          className="w-full h-full object-contain rounded-lg transition-transform duration-500 scale-[0.98] group-hover:scale-[1]"
                           loading="lazy"
                         />
                       ) : (
-                        <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-[#E5DFD4] text-[#0F4C4C]">
-                          <Layers className="w-12 h-12 mb-2 text-[#0F4C4C]" />
-                          <span className="font-bold text-lg">{project.title}</span>
-                          <span className="text-xs text-[#4A4A4A]">Live Commercial Web Platform</span>
+                        <div className="w-full h-full flex flex-col items-center justify-center p-8 bg-[#0a1b18] text-[#7A9A8B]">
+                          <Layers className="w-12 h-12 mb-2 text-[#7A9A8B]" />
+                          <span className="font-bold text-lg text-white">{project.title}</span>
+                          <span className="text-xs text-[#a0b8b2]">Live Commercial Web Platform</span>
                         </div>
                       )}
-                    </div>
-
-                    {/* Subtle overlay pill */}
-                    <div className="absolute top-3 left-3 px-3 py-1 rounded-md bg-[#091A2A]/80 backdrop-blur-md text-white text-xs font-medium flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
-                      <span>Live Deployment</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Details Column */}
-                <div className="lg:col-span-6 order-1 lg:order-2 space-y-6 text-left">
+                <div className="lg:col-span-5 order-1 lg:order-2 space-y-6 text-left">
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-[#7A9A8B] mb-1">
                       {project.clientSubtitle}

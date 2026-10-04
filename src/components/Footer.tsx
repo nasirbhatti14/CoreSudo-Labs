@@ -176,7 +176,16 @@ export const Footer: React.FC = () => {
                   onClick={(e) => handleNavClick(e, '#services')}
                   className="hover:text-[#0F4C4C] transition-colors"
                 >
-                  AI / Automation Solutions
+                  AI &amp; Machine Learning (AI/ML)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  onClick={(e) => handleNavClick(e, '#services')}
+                  className="hover:text-[#0F4C4C] transition-colors"
+                >
+                  AI &amp; Automation Solutions
                 </a>
               </li>
               <li>

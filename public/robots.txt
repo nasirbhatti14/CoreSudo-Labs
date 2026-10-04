@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coresudo-labs.netlify.app/sitemap.xml

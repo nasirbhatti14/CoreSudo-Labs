@@ -2,6 +2,7 @@ import React from 'react';
 import { 
   Globe, 
   Server, 
+  Brain,
   Bot, 
   Boxes, 
   ArrowRight,
@@ -54,22 +55,50 @@ export const Services: React.FC = () => {
       ],
     },
     {
-      id: 'ai-automation',
+      id: 'ai-ml',
       number: '03',
+      icon: Brain,
+      title: 'AI & Machine Learning (AI/ML)',
+      description:
+        'Custom machine learning models, predictive intelligence, and deep learning algorithms designed to solve complex domain challenges. We develop, train, fine-tune, and deploy ML models into production with scalable inference pipelines.',
+      capabilities: [
+        'Supervised, Unsupervised & Deep Learning Models',
+        'Custom LLM Fine-Tuning & Prompt Architecture',
+        'Predictive Analytics, Classification & Forecasting',
+        'Computer Vision, OCR & Natural Language Processing (NLP)',
+      ],
+    },
+    {
+      id: 'ai-automation',
+      number: '04',
       icon: Bot,
       title: 'AI & Automation Solutions',
       description:
-        'Intelligent process automations, LLM pipeline integrations, and custom autonomous agents designed to eliminate repetitive operational tasks and extract valuable insights from your organizational data.',
+        'Intelligent process automations, autonomous agent workflows, and Retrieval-Augmented Generation (RAG) pipelines designed to eliminate repetitive operational tasks and extract actionable insights from data.',
       capabilities: [
-        'LLM & Generative AI Model Integrations',
-        'Automated Data Extraction & ETL Pipelines',
-        'Custom Workflow & Task Automations',
-        'Internal Operational Bots & Assistants',
+        'Autonomous Multi-Agent & LLM Pipelines',
+        'Retrieval-Augmented Generation (RAG) Systems',
+        'Automated Data Extraction & ETL Workflows',
+        'Enterprise Operational Bots & Smart Assistants',
+      ],
+    },
+    {
+      id: 'cloud-db',
+      number: '05',
+      icon: Database,
+      title: 'Cloud & Database Architecture',
+      description:
+        'Scalable cloud infrastructure, managed database engineering, and automated deployment pipelines configured for 99.9% uptime, data durability, and fast query execution.',
+      capabilities: [
+        'Cloud Infrastructure (AWS, GCP, VPS) & Docker',
+        'PostgreSQL, Redis & Vector Database Optimization',
+        'CI/CD Deployment Pipelines & Environment Config',
+        'Data Security, Automated Backups & System Monitoring',
       ],
     },
     {
       id: 'custom-software',
-      number: '04',
+      number: '06',
       icon: Boxes,
       title: 'Custom Software Development',
       description:
@@ -119,20 +148,20 @@ export const Services: React.FC = () => {
           </p>
         </div>
 
-        {/* Services Grid (2x2 layout on desktop with single elevation depth) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+        {/* Services Grid (3x2 layout on desktop with single elevation depth) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={service.id}
-                className="group relative bg-[#EFEBE3] rounded-2xl p-8 sm:p-10 border border-[#DDD8CC] transition-all duration-300 hover:border-[#7A9A8B] hover:shadow-sm flex flex-col justify-between"
+                className="group relative bg-[#EFEBE3] rounded-2xl p-7 sm:p-8 border border-[#DDD8CC] transition-all duration-300 hover:border-[#7A9A8B] hover:shadow-sm flex flex-col justify-between"
               >
                 <div>
                   {/* Top card row: Icon + Editorial Number */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-[#F7F5F0] border border-[#DDD8CC] flex items-center justify-center text-[#0F4C4C] group-hover:bg-[#0F4C4C] group-hover:text-[#F7F5F0] transition-colors duration-300 shadow-xs">
-                      <IconComponent className="w-7 h-7" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-13 h-13 rounded-xl bg-[#F7F5F0] border border-[#DDD8CC] flex items-center justify-center text-[#0F4C4C] group-hover:bg-[#0F4C4C] group-hover:text-[#F7F5F0] transition-colors duration-300 shadow-xs">
+                      <IconComponent className="w-6 h-6" />
                     </div>
                     <span className="font-mono text-sm font-bold text-[#7A9A8B] tracking-wider">
                       {service.number}
@@ -140,17 +169,17 @@ export const Services: React.FC = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl font-bold text-[#1C1C1C] mb-3 group-hover:text-[#0F4C4C] transition-colors font-display">
+                  <h3 className="text-xl sm:text-2xl font-bold text-[#1C1C1C] mb-3 group-hover:text-[#0F4C4C] transition-colors font-display">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[#4A4A4A] leading-relaxed text-sm sm:text-base mb-6 font-normal">
+                  <p className="text-[#4A4A4A] leading-relaxed text-sm mb-6 font-normal">
                     {service.description}
                   </p>
 
                   {/* Core Capabilities List */}
-                  <div className="pt-4 border-t border-[#DDD8CC] mb-8">
+                  <div className="pt-4 border-t border-[#DDD8CC] mb-6">
                     <div className="text-xs font-semibold uppercase tracking-wider text-[#1C1C1C] mb-3">
                       Key Deliverables &amp; Focus
                     </div>
